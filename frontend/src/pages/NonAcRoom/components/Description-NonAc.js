@@ -106,7 +106,7 @@ export default function DescriptionNonAc() {
 
           <div className="na-image na-animate right">
             <img
-              src="/images/non-AC-Room-2.jpeg"
+              src="/images/Non-AC-Room-2.jpeg"
               alt="Peaceful Resort Room"
             />
           </div>

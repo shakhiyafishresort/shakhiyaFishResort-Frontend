@@ -106,7 +106,7 @@ title:
     },
     {
         image:
-        "/images/Non-AC_Room-1.jpeg",
+        "/images/non-AC_Room-1.jpeg",
         title:
         "Non-A/C Room",
     },
