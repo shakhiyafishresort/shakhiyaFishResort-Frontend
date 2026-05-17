@@ -33,6 +33,7 @@ export default function BlogDetails() {
       setLoading(false);
     }
   };
+  fetchBlog();
   }, [slug]);
 
   
