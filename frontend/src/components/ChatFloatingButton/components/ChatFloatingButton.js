@@ -20,7 +20,7 @@ const ChatbotFloatingButton = () => {
         <a
           href="https://wa.me/9806914530" 
           target="_blank"
-          rel="noopener noreferrer"
+       
           className="chat-icon whatsapp"
         >
           <FaWhatsapp />
@@ -28,7 +28,7 @@ const ChatbotFloatingButton = () => {
         <a
           href="https://www.facebook.com/profile.php?id=100085531920421"
           target="_blank"
-          rel="noopener noreferrer"
+        
           className="chat-icon facebook"
         >
           <FaFacebookMessenger />

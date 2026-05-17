@@ -12,7 +12,7 @@ import {
   FaConciergeBell,
   FaUtensils,
   FaGlassCheers,
-  FaHotTub,
+
 } from "react-icons/fa";
 
 import "../styles/Description-SweetRoom.css";

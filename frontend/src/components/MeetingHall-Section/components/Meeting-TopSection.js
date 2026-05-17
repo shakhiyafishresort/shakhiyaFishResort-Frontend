@@ -1,11 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 
 import "../styles/Meeting-TopSection.css";
 
 export default function MeetingHallTopSection() {
 
-  const navigate = useNavigate();
+
 
   return (
 
