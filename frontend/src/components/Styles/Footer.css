@@ -1,0 +1,167 @@
+.ft-wrapper {
+  background: white;
+  color: #050d19;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+
+
+.ft-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+
+.ft-box h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #c89b3c;
+}
+
+.ft-box p,
+.ft-box li {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #050d19;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+/* Remove bullet */
+.ft-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+.ft-box a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+  display: inline-block;
+  width: 100%;
+}
+
+
+.ft-box li,
+.ft-box p {
+  transition: 0.3s;
+}
+
+.ft-box li:hover,
+.ft-box p:hover,
+.ft-box a:hover {
+  color: #c89b3c;
+  transform: translateX(5px);
+}
+
+
+.ft-social {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ft-social a {
+  width: 38px;
+  height: 38px;
+  background: #edeff1;
+  color: rgb(15, 5, 5);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.ft-social a:hover {
+  background: #c89b3c;
+  color: white;
+  transform: translateY(-4px);
+}
+
+
+.ft-bottom {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #374151;
+  font-size: 14px;
+  color: black;
+}
+
+
+@media (max-width: 1024px) {
+  .ft-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .ft-box h3 {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ft-wrapper {
+    padding-top: 45px;
+  }
+
+  .ft-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .ft-box h3 {
+    margin-bottom: 15px;
+  }
+
+  .ft-box p,
+  .ft-box li {
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .ft-social {
+    justify-content: center;
+  }
+
+  .ft-bottom {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .ft-container {
+    width: 92%;
+  }
+
+  .ft-box h3 {
+    font-size: 18px;
+  }
+
+  .ft-box p,
+  .ft-box li {
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .ft-social a {
+    width: 34px;
+    height: 34px;
+  }
+}

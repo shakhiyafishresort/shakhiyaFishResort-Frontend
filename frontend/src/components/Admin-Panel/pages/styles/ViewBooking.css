@@ -1,0 +1,186 @@
+.vb-wrapper{
+  width:100%;
+  padding:30px;
+  background:#f9fafb;
+  min-height:100vh;
+}
+
+.vb-title{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:25px;
+  color:#111827;
+}
+
+.vb-loading,
+.vb-empty{
+  text-align:center;
+  padding:40px;
+  font-size:18px;
+  color:#6b7280;
+}
+
+.vb-table-wrapper{
+  width:100%;
+  overflow-x:auto;
+}
+
+.vb-table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.vb-table thead{
+  background:#111827;
+  color:white;
+}
+
+.vb-table th{
+  padding:16px;
+  text-align:left;
+  font-size:14px;
+  font-weight:600;
+}
+
+.vb-table td{
+  padding:16px;
+  border-bottom:1px solid #e5e7eb;
+  font-size:14px;
+  vertical-align:middle;
+}
+
+.vb-table tbody tr:hover{
+  background:#f9fafb;
+}
+
+.vb-name{
+  font-weight:600;
+  color:#111827;
+  margin-bottom:4px;
+}
+
+.vb-status{
+  padding:7px 14px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:600;
+  text-transform:capitalize;
+}
+
+.vb-pending{
+  background:#fff7e6;
+  color:#c89b3c;
+}
+
+.vb-confirmed{
+  background:#dcfce7;
+  color:#15803d;
+}
+
+.vb-cancelled{
+  background:#fee2e2;
+  color:#dc2626;
+}
+
+.vb-btn-group{
+  display:flex;
+  gap:10px;
+}
+
+.vb-edit-btn,
+.vb-delete-btn,
+.vb-save-btn,
+.vb-cancel-btn{
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.vb-edit-btn{
+  background:#2563eb;
+  color:white;
+}
+
+.vb-edit-btn:hover{
+  background:#1d4ed8;
+}
+
+.vb-delete-btn{
+  background:#dc2626;
+  color:white;
+}
+
+.vb-delete-btn:hover{
+  background:#b91c1c;
+}
+
+.vb-save-btn{
+  background:#16a34a;
+  color:white;
+}
+
+.vb-save-btn:hover{
+  background:#15803d;
+}
+
+.vb-cancel-btn{
+  background:#6b7280;
+  color:white;
+}
+
+.vb-cancel-btn:hover{
+  background:#4b5563;
+}
+
+.vb-edit-group{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.vb-edit-group input,
+.vb-phone-input,
+.vb-select{
+  width:100%;
+  padding:10px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  outline:none;
+  font-size:14px;
+}
+
+.vb-edit-group input:focus,
+.vb-phone-input:focus,
+.vb-select:focus{
+  border-color:#c89b3c;
+}
+
+@media(max-width:768px){
+
+  .vb-wrapper{
+    padding:15px;
+  }
+
+  .vb-title{
+    font-size:24px;
+  }
+
+  .vb-table th,
+  .vb-table td{
+    padding:12px;
+    font-size:13px;
+  }
+
+  .vb-btn-group{
+    flex-direction:column;
+  }
+
+}

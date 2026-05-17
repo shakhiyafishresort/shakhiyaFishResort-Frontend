@@ -1,0 +1,447 @@
+/* ================= WRAPPER ================= */
+
+.add-blog-wrapper {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  background: #ffffff;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.08);
+
+  animation: fadeIn 0.5s ease;
+}
+
+/* ================= HEADER ================= */
+
+.add-blog-header {
+  margin-bottom: 30px;
+}
+
+.add-blog-header h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111827;
+
+  margin-bottom: 10px;
+}
+
+.add-blog-header p {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================= FORM ================= */
+
+.add-blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ================= GROUP ================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ================= INPUT ================= */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  background: #fff;
+
+  transition: 0.3s ease;
+}
+
+/* ================= FOCUS ================= */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+  border-color: #c89b3c;
+
+  box-shadow:
+    0 0 0 4px rgba(200,155,60,0.15);
+
+}
+
+/* ================= TEXTAREA ================= */
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.7;
+}
+
+/* ================= FILE ================= */
+
+.form-group input[type="file"] {
+  padding: 12px;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+/* ================= BUTTON ================= */
+
+.blog-submit-btn {
+
+  width: fit-content;
+
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c89b3c,
+      #a67c28
+    );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.blog-submit-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px rgba(200,155,60,0.3);
+
+}
+
+/* ================= TABLE SECTION ================= */
+
+.blog-table-wrapper {
+  margin-top: 50px;
+}
+
+.blog-table-wrapper h3 {
+  font-size: 26px;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* ================= TABLE ================= */
+
+.blog-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: white;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+/* ================= TABLE HEADER ================= */
+
+.blog-table th {
+
+  background: #111827;
+
+  color: white;
+
+  padding: 16px;
+
+  text-align: left;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* ================= TABLE BODY ================= */
+
+.blog-table td {
+
+  padding: 16px;
+
+  border-bottom: 1px solid #f1f1f1;
+
+  vertical-align: middle;
+
+  font-size: 14px;
+
+  color: #374151;
+}
+
+/* ================= ROW HOVER ================= */
+
+.blog-table tr:hover {
+  background: #f9fafb;
+}
+
+/* ================= IMAGE ================= */
+
+.blog-table-img {
+
+  width: 110px;
+
+  height: 75px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  border: 2px solid #eee;
+}
+
+/* ================= BLOG TITLE ================= */
+
+.blog-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.blog-table small {
+  color: #6b7280;
+}
+
+/* ================= STATUS ================= */
+
+.blog-status {
+
+  padding: 7px 14px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+
+  display: inline-block;
+}
+
+/* PUBLISHED */
+
+.blog-status.published {
+
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+/* DRAFT */
+
+.blog-status.draft {
+
+  background: #fef3c7;
+
+  color: #92400e;
+}
+
+/* ================= ACTIONS ================= */
+
+.blog-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ================= BUTTONS ================= */
+
+.edit-btn,
+.delete-btn {
+
+  padding: 8px 16px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+/* EDIT */
+
+.edit-btn {
+
+  background: #2563eb;
+
+  color: white;
+}
+
+.edit-btn:hover {
+
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+/* DELETE */
+
+.delete-btn {
+
+  background: #dc2626;
+
+  color: white;
+}
+
+.delete-btn:hover {
+
+  background: #b91c1c;
+
+  transform: translateY(-1px);
+}
+
+/* ================= EMPTY ================= */
+
+.no-blog {
+
+  text-align: center;
+
+  padding: 30px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+/* ================= SCROLLBAR ================= */
+
+.blog-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.blog-table-wrapper::-webkit-scrollbar-thumb {
+  background: #c89b3c;
+  border-radius: 20px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .add-blog-wrapper {
+    padding: 24px;
+  }
+
+  .blog-table {
+    min-width: 900px;
+  }
+
+  .blog-table-wrapper {
+    overflow-x: auto;
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .add-blog-wrapper {
+    padding: 18px;
+  }
+
+  .add-blog-header h2 {
+    font-size: 28px;
+  }
+
+  .blog-submit-btn {
+    width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 13px;
+  }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .add-blog-header h2 {
+    font-size: 24px;
+  }
+
+  .blog-table th,
+  .blog-table td {
+    padding: 12px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+}

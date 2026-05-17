@@ -1,0 +1,93 @@
+.wm-wrapper {
+  width: 100%;
+  padding: 90px 0;
+  background: #f3f4f6;
+}
+
+.wm-container {
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* IMAGE */
+.wm-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* TEXT */
+.wm-text {
+  max-width: 550px;
+}
+
+.wm-title {
+  font-size: 38px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.wm-description {
+  font-size: 18px;
+  font-weight: 500;
+  color: #c89b3c;
+  margin-bottom: 15px;
+}
+
+.wm-paragraph {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.wm-button {
+  padding: 12px 25px;
+  background: #c89b3c;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wm-button:hover {
+  background: #a67c28;
+  transform: scale(1.05);
+}
+
+/* 🔥 SCROLL ANIMATION */
+.wm-reveal {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.wm-left {
+  transform: translateX(-80px);
+}
+
+.wm-right {
+  transform: translateX(80px);
+}
+
+.wm-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .wm-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

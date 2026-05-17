@@ -1,0 +1,211 @@
+/* ================= WRAPPER ================= */
+
+.dd-wrapper{
+  width:100%;
+  padding:100px 8%;
+  background:#f9fafb;
+
+  display:flex;
+  flex-direction:column;
+  gap:120px;
+
+  overflow:hidden;
+}
+
+/* ================= SECTION ================= */
+
+.dd-section{
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:70px;
+}
+
+/* SECOND SECTION REVERSE */
+
+.reverse-section{
+  flex-direction:row-reverse;
+}
+
+/* ================= IMAGE ================= */
+
+.dd-image-box{
+  flex:1;
+
+  border-radius:24px;
+  overflow:hidden;
+
+  position:relative;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,0.12);
+}
+
+.dd-image-box img{
+  width:100%;
+  height:540px;
+
+  object-fit:cover;
+
+  transition:0.6s ease;
+}
+
+.dd-image-box:hover img{
+  transform:scale(1.08);
+}
+
+/* ================= CONTENT ================= */
+
+.dd-content{
+  flex:1;
+}
+
+.dd-tag{
+  display:inline-block;
+
+  background:#fff4dd;
+  color:#c89b3c;
+
+  padding:8px 18px;
+
+  border-radius:30px;
+
+  font-size:14px;
+  font-weight:700;
+
+  margin-bottom:22px;
+}
+
+.dd-title{
+  font-size:50px;
+  line-height:1.2;
+
+  color:#111827;
+
+  margin-bottom:24px;
+}
+
+.dd-text{
+  font-size:17px;
+  line-height:1.9;
+
+  color:#6b7280;
+
+  margin-bottom:35px;
+}
+
+/* ================= FEATURES ================= */
+
+.dd-features{
+  display:grid;
+
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:18px;
+}
+
+.dd-feature{
+  background:white;
+
+  padding:18px;
+
+  border-radius:14px;
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,0.06);
+
+  transition:0.3s ease;
+}
+
+.dd-feature:hover{
+  transform:translateY(-6px);
+}
+
+.dd-feature svg{
+  color:#c89b3c;
+  font-size:22px;
+}
+
+.dd-feature span{
+  font-size:15px;
+  font-weight:600;
+  color:#111827;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.dd-animate{
+  opacity:0;
+  transition:all 1s ease;
+}
+
+/* LEFT */
+
+.dd-left{
+  transform:translateX(-100px);
+}
+
+/* RIGHT */
+
+.dd-right{
+  transform:translateX(100px);
+}
+
+/* SHOW */
+
+.dd-animate.show{
+  opacity:1;
+  transform:translateX(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+  .dd-section,
+  .reverse-section{
+    flex-direction:column;
+  }
+
+  .dd-title{
+    font-size:38px;
+  }
+
+  .dd-image-box img{
+    height:420px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .dd-wrapper{
+    padding:70px 5%;
+    gap:70px;
+  }
+
+  .dd-title{
+    font-size:30px;
+  }
+
+  .dd-text{
+    font-size:15px;
+  }
+
+  .dd-features{
+    grid-template-columns:1fr;
+  }
+
+  .dd-image-box img{
+    height:320px;
+  }
+
+}

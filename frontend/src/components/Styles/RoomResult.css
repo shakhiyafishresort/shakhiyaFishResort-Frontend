@@ -1,0 +1,345 @@
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ================= WRAPPER ================= */
+.rr-wrapper{
+  width:100%;
+  padding:80px 20px;
+  background:#f9fafb;
+  min-height:100vh;
+}
+
+/* ================= TEXT ================= */
+.rr-heading{
+  text-align:center;
+  font-size:42px;
+  color:#111827;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.rr-sub{
+  text-align:center;
+  color:#6b7280;
+  margin-bottom:15px;
+  font-size:16px;
+}
+
+.rr-promo{
+  width:max-content;
+  margin:0 auto 40px;
+  background:#fff7e6;
+  color:#c89b3c;
+  padding:10px 18px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+}
+
+/* ================= LOADING ================= */
+.rr-loading{
+  text-align:center;
+  padding:50px;
+  font-size:18px;
+  color:#6b7280;
+}
+
+/* ================= GRID ================= */
+.rr-grid{
+  width:90%;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:28px;
+}
+
+/* ================= CARD ================= */
+.rr-card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:0.35s ease;
+}
+
+.rr-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.14);
+}
+
+/* ================= IMAGE ================= */
+.rr-img-box{
+  width:100%;
+  height:240px;
+  overflow:hidden;
+}
+
+.rr-img-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.4s ease;
+}
+
+.rr-card:hover img{
+  transform:scale(1.08);
+}
+
+/* ================= CONTENT ================= */
+.rr-content{
+  padding:22px;
+}
+
+.rr-title{
+  font-size:24px;
+  margin-bottom:10px;
+  color:#111827;
+}
+
+.rr-desc{
+  font-size:14px;
+  line-height:1.7;
+  color:#6b7280;
+  margin-bottom:16px;
+}
+
+/* ================= INFO ================= */
+.rr-info{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:16px;
+  color:#374151;
+  font-size:14px;
+}
+
+.rr-info span{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* ================= PRICE ================= */
+.rr-price{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  color:#c89b3c;
+  font-size:18px;
+  font-weight:700;
+
+  margin-bottom:18px;
+}
+
+/* ================= BUTTON ================= */
+.rr-btn{
+  width:100%;
+  border:none;
+
+  background:#c89b3c;
+  color:white;
+
+  padding:14px;
+  border-radius:10px;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.rr-btn:hover{
+  background:#a67c28;
+}
+
+/* ================= MODAL ================= */
+.rr-modal-overlay{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,0.6);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:999;
+  padding:20px;
+}
+
+.rr-modal{
+  width:100%;
+  max-width:500px;
+
+  background:white;
+  border-radius:18px;
+
+  padding:30px;
+  position:relative;
+
+  animation:fadeIn 0.3s ease;
+}
+
+/* ================= CLOSE ================= */
+.rr-close{
+  position:absolute;
+  top:15px;
+  right:15px;
+
+  width:35px;
+  height:35px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#f3f4f6;
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.rr-close:hover{
+  background:#e5e7eb;
+}
+
+/* ================= MODAL TITLE ================= */
+.rr-modal-title{
+  text-align:center;
+  margin-bottom:25px;
+  color:#111827;
+  font-size:28px;
+}
+
+/* ================= BOOKING DETAILS ================= */
+.rr-booking-details{
+  background:#f9fafb;
+  padding:18px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+.rr-booking-details div{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+.rr-booking-details div:last-child{
+  margin-bottom:0;
+}
+
+/* ================= FORM ================= */
+.rr-form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.rr-input,
+.rr-textarea{
+  width:100%;
+  padding:14px;
+
+  border:1px solid #d1d5db;
+  border-radius:10px;
+
+  outline:none;
+  font-size:14px;
+
+  transition:0.3s;
+}
+
+.rr-input:focus,
+.rr-textarea:focus{
+  border-color:#c89b3c;
+}
+
+.rr-textarea{
+  resize:none;
+  min-height:120px;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+.rr-submit-btn{
+  border:none;
+
+  background:#c89b3c;
+  color:white;
+
+  padding:14px;
+  border-radius:10px;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.rr-submit-btn:hover{
+  background:#a67c28;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+  .rr-wrapper{
+    padding:60px 15px;
+  }
+
+  .rr-heading{
+    font-size:30px;
+  }
+
+  .rr-grid{
+    width:100%;
+  }
+
+  .rr-modal{
+    padding:22px;
+  }
+
+  .rr-title{
+    font-size:20px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .rr-heading{
+    font-size:24px;
+  }
+
+  .rr-sub{
+    font-size:14px;
+  }
+
+  .rr-info{
+    flex-direction:column;
+    gap:10px;
+  }
+
+}

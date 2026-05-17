@@ -1,0 +1,95 @@
+/* ================= WRAPPER ================= */
+.na-wrapper {
+  width: 100%;
+  padding: 60px 8%;
+  background: #f9fafb;
+}
+
+/* ================= SECTION ================= */
+.na-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+/* reverse layout */
+.na-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ================= IMAGE ================= */
+.na-image {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.na-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.na-image:hover img {
+  transform: scale(1.08);
+}
+
+/* ================= CONTENT ================= */
+.na-content {
+  flex: 1;
+}
+
+.na-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #111827;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.na-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.na-text {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.na-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.na-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .na-section,
+  .na-section.reverse {
+    flex-direction: column;
+  }
+
+  .na-image img {
+    height: 280px;
+  }
+
+  .na-title {
+    font-size: 26px;
+  }
+}

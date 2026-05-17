@@ -1,0 +1,186 @@
+
+/* ================= WRAPPER ================= */
+.cf-wrapper {
+  width: 100%;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f9fafb, #eef2f7);
+}
+
+/* ================= CONTAINER ================= */
+.cf-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+
+  display: flex;
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  background: #fff;
+}
+
+/* ================= LEFT ================= */
+.cf-left {
+  width: 40%;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+  padding: 45px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cf-left-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #c89b3c;
+}
+
+.cf-info-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.cf-icon {
+  color: #c89b3c;
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+.cf-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================= SOCIAL ================= */
+.cf-social {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+}
+
+.cf-social a {
+  width: 38px;
+  height: 38px;
+
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  transition: 0.3s;
+}
+
+.cf-social a:hover {
+  background: #c89b3c;
+  transform: translateY(-2px);
+}
+
+/* ================= RIGHT ================= */
+.cf-right {
+  width: 60%;
+  padding: 45px;
+}
+
+.cf-form-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+/* ================= FORM ================= */
+.cf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ROW */
+.cf-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= INPUT FIELDS (MAIN FIX) ================= */
+.cf-form input,
+.cf-form textarea {
+  width: 100%;
+  padding: 14px 15px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  outline: none;
+  font-size: 14px;
+
+  background: #fff;
+
+  transition: all 0.3s ease;
+}
+
+/* HALF INPUT */
+.cf-row input {
+  width: 50%;
+}
+
+/* ================= FOCUS EFFECT ================= */
+.cf-form input:focus,
+.cf-form textarea:focus {
+  border-color: #c89b3c;
+  box-shadow: 0 0 0 4px rgba(200, 155, 60, 0.15);
+  transform: translateY(-1px);
+}
+
+/* TEXTAREA */
+.cf-form textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* ================= BUTTON ================= */
+.cf-button {
+  background: linear-gradient(135deg, #c89b3c, #a67c28);
+  color: white;
+
+  border: none;
+  padding: 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.cf-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .cf-container {
+    flex-direction: column;
+  }
+
+  .cf-left,
+  .cf-right {
+    width: 100%;
+  }
+
+  .cf-row {
+    flex-direction: column;
+  }
+
+  .cf-row input {
+    width: 100%;
+  }
+}

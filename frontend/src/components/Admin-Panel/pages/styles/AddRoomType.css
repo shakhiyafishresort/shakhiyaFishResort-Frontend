@@ -1,0 +1,182 @@
+.art-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  padding: 40px 15px;
+}
+
+/* ================= FORM CARD ================= */
+.art-container {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  margin-bottom: 40px;
+
+  background: #ffffff;
+  padding: 35px 30px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.art-container:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= TITLE ================= */
+.art-title {
+  text-align: center;
+  margin-bottom: 25px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+/* ================= FORM ================= */
+.art-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ================= INPUTS ================= */
+.art-input,
+.art-textarea {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+  background: #f9fafb;
+}
+
+.art-input:focus,
+.art-textarea:focus {
+  border-color: #c89b3c;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.15);
+}
+
+/* ================= TEXTAREA ================= */
+.art-textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* ================= ROW ================= */
+.art-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* ================= FILE INPUT ================= */
+.art-file-input {
+  width: 100%;
+  padding: 10px;
+
+  border: 1px dashed #c89b3c;
+  border-radius: 10px;
+
+  background: #fff8e1;
+
+  cursor: pointer;
+}
+
+/* ================= PREVIEW ================= */
+.art-preview-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 10px;
+}
+
+.art-preview-image {
+  width: 180px;
+  height: 130px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  border: 3px solid #c89b3c;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+}
+
+.art-preview-image:hover {
+  transform: scale(1.05);
+}
+
+/* ================= BUTTON ================= */
+.art-btn {
+  background: linear-gradient(135deg, #c89b3c, #a67c28);
+  color: white;
+
+  border: none;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.art-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(200, 155, 60, 0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .art-container {
+    padding: 25px;
+  }
+
+  .art-row {
+    flex-direction: column;
+  }
+
+  .art-title {
+    font-size: 24px;
+  }
+
+  .art-preview-image {
+    width: 150px;
+    height: 110px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .art-container {
+    padding: 20px;
+  }
+
+  .art-title {
+    font-size: 20px;
+  }
+
+  .art-btn {
+    font-size: 14px;
+  }
+}

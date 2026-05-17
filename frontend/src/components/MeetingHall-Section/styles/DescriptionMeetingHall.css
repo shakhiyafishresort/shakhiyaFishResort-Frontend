@@ -1,0 +1,237 @@
+/* ================= WRAPPER ================= */
+
+.dmh-wrapper {
+  width: 100%;
+  padding: 100px 8%;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+/* ================= SECTION ================= */
+
+.dmh-section {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 120px;
+}
+
+.dmh-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ================= IMAGE ================= */
+
+.dmh-image-box {
+  flex: 1;
+  position: relative;
+}
+
+.dmh-image-box img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.18);
+
+  transition: 0.5s;
+}
+
+.dmh-image-box img:hover {
+  transform: scale(1.03);
+}
+
+/* ================= CONTENT ================= */
+
+.dmh-content {
+  flex: 1;
+}
+
+.dmh-tag {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  background: rgba(200, 155, 60, 0.12);
+
+  color: #c89b3c;
+
+  border-radius: 50px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.dmh-title {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.dmh-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #4b5563;
+  margin-bottom: 35px;
+}
+
+/* ================= FEATURES ================= */
+
+.dmh-features {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.dmh-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: white;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+
+  transition: 0.3s;
+}
+
+.dmh-feature:hover {
+  transform: translateY(-5px);
+}
+
+.dmh-feature svg {
+  color: #c89b3c;
+  font-size: 22px;
+}
+
+.dmh-feature span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ================= PRICE BOX ================= */
+
+.dmh-price-box {
+  margin-top: 35px;
+
+  background: linear-gradient(
+    135deg,
+    #c89b3c,
+    #e0b95b
+  );
+
+  padding: 25px;
+
+  border-radius: 24px;
+
+  color: white;
+
+  width: fit-content;
+
+  min-width: 260px;
+
+  box-shadow:
+    0 20px 50px rgba(200, 155, 60, 0.35);
+}
+
+.dmh-price-label {
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.dmh-price {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.dmh-price-text {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.mh-animate {
+  opacity: 0;
+  transition:
+    all 1s ease;
+}
+
+.mh-animate.left {
+  transform: translateX(-80px);
+}
+
+.mh-animate.right {
+  transform: translateX(80px);
+}
+
+.mh-animate.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .dmh-section,
+  .dmh-section.reverse {
+    flex-direction: column;
+  }
+
+  .dmh-title {
+    font-size: 36px;
+  }
+
+  .dmh-image-box img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .dmh-wrapper {
+    padding: 70px 5%;
+  }
+
+  .dmh-title {
+    font-size: 30px;
+  }
+
+  .dmh-text {
+    font-size: 15px;
+  }
+
+  .dmh-features {
+    grid-template-columns: 1fr;
+  }
+
+  .dmh-image-box img {
+    height: 320px;
+  }
+
+  .dmh-price {
+    font-size: 36px;
+  }
+}

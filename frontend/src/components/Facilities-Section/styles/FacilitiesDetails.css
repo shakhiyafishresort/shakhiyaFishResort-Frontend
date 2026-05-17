@@ -1,0 +1,106 @@
+.fd-wrapper {
+  width: 100%;
+  padding: 80px 20px;
+  background: #f9fafb;
+  overflow-x: hidden;
+}
+
+.fd-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ================= HEADING ================= */
+.fd-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.fd-title {
+  font-size: 38px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.fd-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* ================= GRID ================= */
+.fd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* ================= CARD ================= */
+.fd-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 14px;
+
+  text-align: center;
+
+  transition: 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.fd-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+/* ICON */
+.fd-icon {
+  font-size: 32px;
+  color: #c89b3c;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.fd-card-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.fd-card-desc {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.fd-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.fd-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .fd-title {
+    font-size: 28px;
+  }
+
+  .fd-subtitle {
+    font-size: 14px;
+  }
+
+  .fd-card {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fd-title {
+    font-size: 24px;
+  }
+}

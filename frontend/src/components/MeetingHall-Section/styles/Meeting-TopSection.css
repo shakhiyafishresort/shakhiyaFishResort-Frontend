@@ -1,0 +1,192 @@
+/* ================= WRAPPER ================= */
+
+.mh-wrapper {
+  width: 100%;
+  height: 70vh;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../../../../public/images/Room-discuss.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* OVERLAY */
+
+.mh-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.4)
+  );
+}
+
+/* CONTENT */
+
+.mh-content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+  color: white;
+
+  max-width: 800px;
+  padding: 20px;
+
+  animation: fadeUp 1s ease;
+}
+
+/* TAG */
+
+.mh-tag {
+  display: inline-block;
+
+  background: #c89b3c;
+  color: #111;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+
+.mh-title {
+  font-size: 58px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* SUBTITLE */
+
+.mh-subtitle {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #f3f4f6;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.mh-btn {
+  background: #c89b3c;
+  color: black;
+
+  border: none;
+
+  padding: 14px 35px;
+
+  border-radius: 40px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.mh-btn:hover {
+  background: #e0b84d;
+  transform: translateY(-3px);
+}
+
+/* SCROLL */
+
+.mh-scroll {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mh-scroll span {
+  width: 26px;
+  height: 45px;
+
+  border: 2px solid white;
+  border-radius: 30px;
+
+  display: block;
+  position: relative;
+}
+
+.mh-scroll span::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 50%;
+
+  width: 5px;
+  height: 10px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  transform: translateX(-50%);
+
+  animation: scrollAnim 1.5s infinite;
+}
+
+/* ANIMATION */
+
+@keyframes scrollAnim {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 15px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .mh-title {
+    font-size: 36px;
+  }
+
+  .mh-subtitle {
+    font-size: 15px;
+  }
+
+  .mh-wrapper {
+    height: 60vh;
+  }
+}

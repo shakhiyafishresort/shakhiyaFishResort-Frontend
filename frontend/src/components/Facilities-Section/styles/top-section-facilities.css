@@ -1,0 +1,99 @@
+/* ================= HERO WRAPPER ================= */
+.ats-wrapper-facilities {
+  width: 100%;
+  height: 60vh;
+
+  background-image: url("../../../../public/images/Garden.jpeg"); /* change image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DARK OVERLAY */
+.ats-overlay-facilities {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* CONTENT */
+.ats-content {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  z-index: 2;
+  animation: fadeUp 1.2s ease;
+}
+
+/* TITLE */
+.ats-title {
+  font-size: 52px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.ats-subtitle {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .ats-title {
+    font-size: 42px;
+  }
+
+  .ats-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ats-wrapper-facilities {
+    height: 50vh;
+  }
+
+  .ats-title {
+    font-size: 32px;
+  }
+
+  .ats-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ats-title {
+    font-size: 26px;
+  }
+
+  .ats-subtitle {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,256 @@
+.rtt-wrapper {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  background: #ffffff;
+
+  padding: 30px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+}
+
+/* ================= TITLE ================= */
+.rtt-title {
+  font-size: 28px;
+  font-weight: 700;
+
+  margin-bottom: 25px;
+
+  color: #111827;
+
+  text-align: center;
+}
+
+/* ================= TABLE WRAPPER ================= */
+.rtt-table-wrapper {
+  overflow-x: auto;
+}
+
+/* ================= TABLE ================= */
+.rtt-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  min-width: 800px;
+}
+
+/* HEADER */
+.rtt-table th {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+
+  padding: 15px;
+
+  text-align: left;
+
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* ROWS */
+.rtt-table td {
+  padding: 14px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  font-size: 14px;
+
+  color: #374151;
+
+  vertical-align: middle;
+}
+
+/* ROW HOVER */
+.rtt-table tbody tr {
+  transition: 0.3s ease;
+}
+
+.rtt-table tbody tr:hover {
+  background: #f9fafb;
+  transform: scale(1.01);
+}
+
+/* ================= IMAGE ================= */
+.rtt-image {
+  width: 80px;
+  height: 60px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  border: 2px solid #e5e7eb;
+
+  transition: 0.3s;
+}
+
+.rtt-image:hover {
+  transform: scale(1.1);
+}
+
+/* ================= INPUTS ================= */
+.rtt-input,
+.rtt-textarea {
+  width: 100%;
+  padding: 8px 10px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.rtt-input:focus,
+.rtt-textarea:focus {
+  border-color: #c89b3c;
+  box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.15);
+}
+
+.rtt-textarea {
+  min-height: 60px;
+  resize: none;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.rtt-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* EDIT BUTTON */
+.rtt-edit-btn {
+  background: #3b82f6;
+  color: white;
+
+  border: none;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.rtt-edit-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* DELETE BUTTON */
+.rtt-delete-btn {
+  background: #ef4444;
+  color: white;
+
+  border: none;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.rtt-delete-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* SAVE BUTTON */
+.rtt-save-btn {
+  background: #10b981;
+  color: white;
+
+  border: none;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.rtt-save-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+/* CANCEL BUTTON */
+.rtt-cancel-btn {
+  background: #6b7280;
+  color: white;
+
+  border: none;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.rtt-cancel-btn:hover {
+  background: #4b5563;
+  transform: translateY(-2px);
+}
+
+/* ================= LOADING / EMPTY ================= */
+.rtt-loading,
+.rtt-empty {
+  text-align: center;
+
+  padding: 30px;
+
+  color: #6b7280;
+
+  font-size: 16px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .rtt-wrapper {
+    padding: 20px;
+  }
+
+  .rtt-title {
+    font-size: 22px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .rtt-table th,
+  .rtt-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .rtt-actions {
+    flex-direction: column;
+  }
+
+  .rtt-image {
+    width: 60px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,107 @@
+.sv-wrapper {
+  width: 100%;
+  padding: 80px 20px;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.sv-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* ================= HEADING ================= */
+.sv-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sv-title {
+  font-size: 38px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.sv-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* ================= GRID ================= */
+.sv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+/* ================= CARD ================= */
+.sv-card {
+  background: #f9fafb;
+  padding: 30px 20px;
+  border-radius: 14px;
+
+  text-align: center;
+
+  transition: 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.sv-card:hover {
+  transform: translateY(-8px);
+  background: white;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+/* ICON */
+.sv-icon {
+  font-size: 35px;
+  color: #c89b3c;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.sv-card-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.sv-card-desc {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.sv-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.sv-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .sv-title {
+    font-size: 28px;
+  }
+
+  .sv-subtitle {
+    font-size: 14px;
+  }
+
+  .sv-card {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sv-title {
+    font-size: 24px;
+  }
+}

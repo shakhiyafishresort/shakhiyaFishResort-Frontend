@@ -1,0 +1,150 @@
+/* ================= WRAPPER ================= */
+.gi-wrapper {
+  width: 100%;
+  padding: 45px 20px;
+  background: #f9fafb;
+}
+
+/* ================= HEADING ================= */
+.gi-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: auto auto 60px;
+}
+
+.gi-tag {
+  display: inline-block;
+
+  background: rgba(200,155,60,0.12);
+  color: #c89b3c;
+
+  padding: 8px 18px;
+  border-radius: 50px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+}
+
+.gi-heading h2 {
+  font-size: 42px;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+.gi-heading p {
+  color: #6b7280;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* ================= GRID ================= */
+.gi-grid {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 24px;
+}
+
+/* ================= CARD ================= */
+.gi-card {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  height: 320px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  transform: translateY(0);
+  transition: 0.4s ease;
+}
+
+.gi-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.gi-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.6s ease;
+}
+
+.gi-card:hover img {
+  transform: scale(1.08);
+}
+
+/* OVERLAY */
+.gi-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.15)
+    );
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 25px;
+
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.gi-card:hover .gi-overlay {
+  opacity: 1;
+}
+
+.gi-overlay h3 {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ================= ANIMATION ================= */
+.gi-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.gi-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .gi-heading h2 {
+    font-size: 32px;
+  }
+
+  .gi-grid {
+    width: 100%;
+  }
+
+  .gi-card {
+    height: 260px;
+  }
+
+}
