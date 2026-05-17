@@ -41,7 +41,7 @@ export default function ResultRooms() {
         setLoading(true);
 
         const res = await fetch(
-          "http://localhost:5000/api/roomchecking/check-availability",
+          "https://shakhiyafishresort-backend.onrender.com/api/roomchecking/check-availability",
           {
             method: "POST",
             headers: {
@@ -96,7 +96,7 @@ export default function ResultRooms() {
       setBookingLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/bookings/book",
+        "https://shakhiyafishresort-backend.onrender.com/api/bookings/book",
         {
           method: "POST",
           headers: {
@@ -164,7 +164,7 @@ export default function ResultRooms() {
 
                 <div className="rr-img-box">
                   <img
-                    src={`http://localhost:5000${room.image}`}
+                    src={`https://shakhiyafishresort-backend.onrender.com${room.image}`}
                     alt={room.name}
                   />
                 </div>
