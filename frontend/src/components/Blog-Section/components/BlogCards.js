@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { Link } from "react-router-dom";
 
 import {
@@ -11,172 +10,128 @@ import {
 import "../styles/BlogCards.css";
 
 export default function BlogCards() {
-
-  const [blogs, setBlogs] =
-    useState([]);
-
-  const [loading, setLoading] =
-    useState(true);
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   /* ================= FETCH BLOGS ================= */
-
   useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch(
+          "http://localhost:5000/api/blogs"
+        );
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.message || "Failed to fetch blogs");
+        }
+
+        setBlogs(Array.isArray(data) ? data : []);
+      } catch (error) {
+        console.log(error);
+        setError("Failed to load blogs");
+      } finally {
+        setLoading(false);
+      }
+    };
 
     fetchBlogs();
-
   }, []);
 
-  const fetchBlogs = async () => {
-
-    try {
-
-      const res = await fetch(
-        "http://localhost:5000/api/blogs"
-      );
-
-      const data =
-        await res.json();
-
-      setBlogs(
-        Array.isArray(data)
-          ? data
-          : []
-      );
-
-    } catch (error) {
-
-      console.log(error);
-
-    } finally {
-
-      setLoading(false);
-
-    }
-  };
-
   return (
-
     <section className="blog-card-section">
 
-      {/* ================= HEADING ================= */}
-
+      {/* ================= HEADER ================= */}
       <div className="blog-card-header">
-
         <span className="blog-small-title">
           Latest Resort Articles
         </span>
 
-        <h2>
-          Travel, Luxury & Resort Blogs
-        </h2>
+        <h2>Travel, Luxury & Resort Blogs</h2>
 
         <p>
           Explore travel tips, luxury room experiences,
           relaxing vacations, and resort lifestyle stories.
         </p>
-
       </div>
 
       {/* ================= LOADING ================= */}
-
-      {loading ? (
-
+      {loading && (
         <div className="blog-loading">
           Loading Blogs...
         </div>
+      )}
 
-      ) : (
+      {/* ================= ERROR ================= */}
+      {!loading && error && (
+        <div className="blog-error">
+          {error}
+        </div>
+      )}
 
-        <div className="blog-card-grid">
+      {/* ================= EMPTY ================= */}
+      {!loading && !error && blogs.length === 0 && (
+        <div className="blog-empty">
+          No blogs available
+        </div>
+      )}
 
-          {blogs.map((blog) => (
+      {/* ================= BLOG GRID ================= */}
+      <div className="blog-card-grid">
 
-            <div
-              className="blog-card"
-              key={blog._id}
-            >
+        {blogs.map((blog) => (
+          <div className="blog-card" key={blog._id}>
 
-              {/* IMAGE */}
+            {/* IMAGE */}
+            <div className="blog-card-image">
+              <img
+                src={`http://localhost:5000${blog.featuredImage}`}
+                alt={blog.title}
+              />
+            </div>
 
-              <div className="blog-card-image">
+            {/* CONTENT */}
+            <div className="blog-card-content">
 
-                <img
-                  src={`http://localhost:5000${blog.featuredImage}`}
-                  alt={blog.title}
-                />
+              <span className="blog-category">
+                {blog.category}
+              </span>
 
-              </div>
+              <h3>{blog.title}</h3>
 
-              {/* CONTENT */}
+              <p>{blog.shortDescription}</p>
 
-              <div className="blog-card-content">
+              {/* META */}
+              <div className="blog-meta">
 
-                {/* CATEGORY */}
-
-                <span className="blog-category">
-
-                  {blog.category}
-
+                <span>
+                  <FaUser />
+                  {blog.author}
                 </span>
 
-                {/* TITLE */}
-
-                <h3>
-
-                  {blog.title}
-
-                </h3>
-
-                {/* DESCRIPTION */}
-
-                <p>
-
-                  {blog.shortDescription}
-
-                </p>
-
-                {/* META */}
-
-                <div className="blog-meta">
-
-                  <span>
-                    <FaUser />
-                    {blog.author}
-                  </span>
-
-                  <span>
-                    <FaCalendarAlt />
-                    {
-                      new Date(
-                        blog.createdAt
-                      ).toLocaleDateString()
-                    }
-                  </span>
-
-                </div>
-
-                {/* BUTTON */}
-
-                <Link
-                  to={`/blog/${blog.slug}`}
-                  className="blog-read-btn"
-                >
-
-                  Read More
-
-                  <FaArrowRight />
-
-                </Link>
+                <span>
+                  <FaCalendarAlt />
+                  {new Date(blog.createdAt).toLocaleDateString()}
+                </span>
 
               </div>
+
+              {/* READ MORE */}
+              <Link
+                to={`/blog/${blog.slug}`}
+                className="blog-read-btn"
+              >
+                Read More <FaArrowRight />
+              </Link>
 
             </div>
 
-          ))}
+          </div>
+        ))}
 
-        </div>
-
-      )}
+      </div>
 
     </section>
   );
