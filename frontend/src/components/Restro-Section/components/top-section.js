@@ -1,9 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import "../styles/top-section.css";
 
 export default function TopSectionRestro() {
-  const navigate = useNavigate();
+
 
   return (
     <section className="rs-wrapper">

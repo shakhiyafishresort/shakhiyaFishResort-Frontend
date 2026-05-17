@@ -18,9 +18,6 @@ export default function BlogDetails() {
   /* ================= FETCH BLOG ================= */
 
   useEffect(() => {
-    fetchBlog();
-  }, [slug]);
-
   const fetchBlog = async () => {
     try {
       const res = await fetch(
@@ -36,6 +33,9 @@ export default function BlogDetails() {
       setLoading(false);
     }
   };
+  }, [slug]);
+
+  
 
   if (loading) {
     return <div className="bd-loading">Loading Blog...</div>;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Styles/BookNow-Section.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
