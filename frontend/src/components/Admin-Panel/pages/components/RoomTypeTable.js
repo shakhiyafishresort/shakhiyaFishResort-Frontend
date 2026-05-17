@@ -24,7 +24,7 @@ export default function RoomTypeTable() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/roomtypes");
+      const res = await fetch("https://shakhiyafishresort-backend.onrender.com/api/roomtypes");
       const data = await res.json();
 
       console.log("ROOM API:", data);
@@ -59,7 +59,7 @@ export default function RoomTypeTable() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/roomtypes/${id}`,
+        `https://shakhiyafishresort-backend.onrender.com/api/roomtypes/${id}`,
         {
           method: "DELETE",
         }
@@ -103,7 +103,7 @@ export default function RoomTypeTable() {
   const handleUpdate = async (id) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/roomtypes/${id}`,
+        `https://shakhiyafishresort-backend.onrender.com/api/roomtypes/${id}`,
         {
           method: "PUT",
           headers: {
@@ -177,7 +177,7 @@ export default function RoomTypeTable() {
                         src={
                           room.image?.startsWith("http")
                             ? room.image
-                            : `http://localhost:5000${room.image}`
+                            : `https://shakhiyafishresort-backend.onrender.com${room.image}`
                         }
                         alt={room.name}
                         className="rtt-image"

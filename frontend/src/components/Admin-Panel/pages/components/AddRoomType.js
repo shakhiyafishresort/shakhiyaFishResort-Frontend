@@ -62,7 +62,7 @@ export default function AddRoomType() {
       sendData.append("adults", formData.adults);
       sendData.append("children", formData.children);
 
-      const res = await fetch("http://localhost:5000/api/roomtypes", {
+      const res = await fetch("https://shakhiyafishresort-backend.onrender.com/api/roomtypes", {
         method: "POST",
         body: sendData,
       });

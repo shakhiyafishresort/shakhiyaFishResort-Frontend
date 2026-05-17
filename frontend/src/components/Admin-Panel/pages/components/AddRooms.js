@@ -30,7 +30,7 @@ export default function AddRooms() {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/roomtypes"
+        "https://shakhiyafishresort-backend.onrender.com/api/roomtypes"
       );
 
       const data = await res.json();
@@ -53,7 +53,7 @@ export default function AddRooms() {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/roomnumbers"
+        "https://shakhiyafishresort-backend.onrender.com/api/roomnumbers"
       );
 
       const data = await res.json();
@@ -80,7 +80,7 @@ export default function AddRooms() {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/roomnumbers",
+        "https://shakhiyafishresort-backend.onrender.com/api/roomnumbers",
         {
           method: "POST",
 
@@ -131,7 +131,7 @@ export default function AddRooms() {
     try {
 
       const res = await fetch(
-        `http://localhost:5000/api/roomnumbers/${id}`,
+        `https://shakhiyafishresort-backend.onrender.com/api/roomnumbers/${id}`,
         {
           method: "DELETE",
         }
@@ -179,7 +179,7 @@ export default function AddRooms() {
     try {
 
       const res = await fetch(
-        `http://localhost:5000/api/roomnumbers/${id}`,
+        `https://shakhiyafishresort-backend.onrender.com/api/roomnumbers/${id}`,
         {
           method: "PUT",
 

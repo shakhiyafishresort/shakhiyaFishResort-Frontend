@@ -44,7 +44,7 @@ export default function ContactForm() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/contact",
+        "https://shakhiyafishresort-backend.onrender.com/api/contact",
         {
           method: "POST",
           headers: {

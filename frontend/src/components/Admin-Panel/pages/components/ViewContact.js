@@ -16,7 +16,7 @@ export default function ViewContact() {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/contact"
+        "https://shakhiyafishresort-backend.onrender.com/api/contact"
       );
 
       const data = await res.json();
@@ -44,7 +44,7 @@ export default function ViewContact() {
     try {
 
       await fetch(
-        `http://localhost:5000/api/contact/${id}`,
+        `https://shakhiyafishresort-backend.onrender.com/api/contact/${id}`,
         {
           method: "DELETE",
         }

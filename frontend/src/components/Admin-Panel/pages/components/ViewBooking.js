@@ -27,7 +27,7 @@ export default function ViewBooking() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/bookings/book"
+        "https://shakhiyafishresort-backend.onrender.com/api/bookings/book"
       );
 
       const data = await res.json();
@@ -63,7 +63,7 @@ export default function ViewBooking() {
     try {
 
       const res = await fetch(
-        `http://localhost:5000/api/bookings/book/${id}`,
+        `https://shakhiyafishresort-backend.onrender.com/api/bookings/book/${id}`,
         {
           method: "DELETE",
         }
@@ -120,7 +120,7 @@ export default function ViewBooking() {
     try {
 
       const res = await fetch(
-        `http://localhost:5000/api/bookings/book/${id}`,
+        `https://shakhiyafishresort-backend.onrender.com/api/bookings/book/${id}`,
         {
           method: "PUT",
 

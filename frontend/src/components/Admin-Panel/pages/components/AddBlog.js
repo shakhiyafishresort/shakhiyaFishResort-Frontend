@@ -45,7 +45,7 @@ export default function AddBlog() {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/blogs"
+        "https://shakhiyafishresort-backend.onrender.com/api/blogs"
       );
 
       const data = await res.json();
@@ -173,7 +173,7 @@ export default function AddBlog() {
       }
 
       let url =
-        "http://localhost:5000/api/blogs";
+        "https://shakhiyafishresort-backend.onrender.com/api/blogs";
 
       let method = "POST";
 
@@ -238,7 +238,7 @@ export default function AddBlog() {
     try {
 
       const res = await fetch(
-        `http://localhost:5000/api/blogs/${id}`,
+        `https://shakhiyafishresort-backend.onrender.com/api/blogs/${id}`,
         {
           method: "DELETE",
         }
@@ -524,7 +524,7 @@ export default function AddBlog() {
                 <td>
 
                   <img
-                    src={`http://localhost:5000${blog.featuredImage}`}
+                    src={`https://shakhiyafishresort-backend.onrender.com${blog.featuredImage}`}
                     alt={blog.title}
                     className="blog-table-img"
                   />

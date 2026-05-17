@@ -21,7 +21,7 @@ export default function BlogDetails() {
   const fetchBlog = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/blogs/${slug}`
+        `https://shakhiyafishresort-backend.onrender.com/api/blogs/${slug}`
       );
 
       const data = await res.json();
@@ -56,7 +56,7 @@ export default function BlogDetails() {
         <div className="bd-hero">
 
           <img
-            src={`http://localhost:5000${blog.featuredImage}`}
+            src={`https://shakhiyafishresort-backend.onrender.com${blog.featuredImage}`}
             alt={blog.title}
           />
 

@@ -20,7 +20,7 @@ export default function RoomsDetails() {
       try {
 
         const res = await fetch(
-          "http://localhost:5000/api/roomtypes"
+          "https://shakhiyafishresort-backend.onrender.com/api/roomtypes"
         );
 
         const data = await res.json();
@@ -88,7 +88,7 @@ export default function RoomsDetails() {
 
             <img
              
-  src={`http://localhost:5000${room.image}`}
+  src={`https://shakhiyafishresort-backend.onrender.com${room.image}`}
   alt={room.name}
 />
             

@@ -31,7 +31,7 @@ export default function Overview() {
       try {
 
         const res = await fetch(
-          "http://localhost:5000/api/dashboard"
+          "https://shakhiyafishresort-backend.onrender.com/api/dashboard"
         );
 
         const data =

@@ -19,7 +19,7 @@ export default function BlogCards() {
     const fetchBlogs = async () => {
       try {
         const res = await fetch(
-          "http://localhost:5000/api/blogs"
+          "https://shakhiyafishresort-backend.onrender.com/api/blogs"
         );
 
         const data = await res.json();
@@ -87,7 +87,7 @@ export default function BlogCards() {
             {/* IMAGE */}
             <div className="blog-card-image">
               <img
-                src={`http://localhost:5000${blog.featuredImage}`}
+                src={`https://shakhiyafishresort-backend.onrender.com${blog.featuredImage}`}
                 alt={blog.title}
               />
             </div>

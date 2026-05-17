@@ -21,7 +21,7 @@ export default function BookingRoom() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/roomchecking/check-availability",
+        "https://shakhiyafishresort-backend.onrender.com/api/roomchecking/check-availability",
         {
           method: "POST",
           headers: {
