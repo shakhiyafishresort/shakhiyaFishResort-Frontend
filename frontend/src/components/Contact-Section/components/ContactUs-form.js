@@ -119,10 +119,10 @@ export default function ContactForm() {
             <a href="https://www.facebook.com/profile.php?id=100085531920421" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
-            <a href="https://www.instagram.com/shakhiyafishresort" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/shakhiyafish?igsh=MTJxdTF4cG92bjVrdQ==" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://www.tiktok.com/@shakhiyafishresort" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.tiktok.com/@shakhiya.fish.resort" target="_blank" rel="noopener noreferrer">
               <SiTiktok />
             </a>
           </div>
