@@ -65,11 +65,6 @@ export default function FacilitiesDetails() {
       desc: "Relax with drinks and a peaceful ambiance.",
     },
     {
-      icon: <FaSwimmingPool />,
-      title: "Swimming Pool",
-      desc: "Clean and refreshing pool for relaxation.",
-    },
-    {
       icon: <FaSpa />,
       title: "Spa & Wellness",
       desc: "Rejuvenate your body and mind with spa services.",
