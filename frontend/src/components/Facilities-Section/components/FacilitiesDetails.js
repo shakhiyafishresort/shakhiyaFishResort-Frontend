@@ -3,7 +3,6 @@ import "../styles/FacilitiesDetails.css";
 
 import {
   FaWifi,
-  FaSwimmingPool,
   FaParking,
   FaUtensils,
   FaSpa,
